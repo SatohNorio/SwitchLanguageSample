@@ -1,0 +1,32 @@
+﻿<Window x:Class="SwitchLanguageSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:SwitchLanguageSample"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" Title="MainWindow"
+        Width="525" Height="350" mc:Ignorable="d">
+    <Grid Name="FGrid">
+        <Grid.Resources>
+            <ResourceDictionary Source="Resources/Dictionary1.ja-jp.xaml" />
+        </Grid.Resources>
+        <Menu Height="23" HorizontalAlignment="Left" VerticalAlignment="Top"
+              VerticalContentAlignment="Center" WindowChrome.IsHitTestVisibleInChrome="True">
+            <MenuItem Height="19" HorizontalAlignment="Left" VerticalAlignment="Top"
+                      Style="{DynamicResource setting}">
+                <MenuItem Height="20" Style="{DynamicResource language}">
+                    <MenuItem Name="miJp" Height="20" Click="MenuItem_Setting_Click"
+                              Header="日本語" />
+                    <MenuItem Name="miEn" Height="20" Click="MenuItem_Setting_Click"
+                              Header="English" />
+                    <MenuItem Name="miCn" Height="20" Click="MenuItem_Setting_Click"
+                              Header="中文" />
+                    <MenuItem Name="miKo" Height="20" Click="MenuItem_Setting_Click"
+                              Header="한국어" />
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+        <Label x:Name="FLabel2" Margin="0" HorizontalAlignment="Center"
+               VerticalAlignment="Center"
+               Style="{DynamicResource hello}" />
+    </Grid>
+</Window>
